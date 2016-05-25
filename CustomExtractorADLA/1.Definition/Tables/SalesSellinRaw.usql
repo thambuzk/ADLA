@@ -1,0 +1,31 @@
+﻿USE DATABASE [CustomExtractor];
+
+DROP TABLE IF EXISTS [Ingestion].[SalesSellinRaw];
+CREATE TABLE IF NOT EXISTS [Ingestion].[SalesSellinRaw]
+(
+    [TransmissionID] int,
+    InvoiceDate string,
+    CompanyCode string,
+    SalesOfficeCode string,
+    TerritoryCode string,
+    PartNumber string,
+    ShipTo string,
+    BillTo string,
+    BillDocTypeCode string,
+    GKProgramCode string,
+    GKItemID string,
+    CurrencyCode string,
+    Qty float?,
+    Revenue string,
+    TransferCOGS string,
+    PlantCode string,
+    InvoiceDocNumber string,
+    InvoiceLineItemNumber string,
+    ReasonCode string,
+    BillingSystemCode string,
+    RecordTypeCode string,
+    ChannelCode string,
+    SubsidiaryCode string,
+    OriginalTransactionDate string,
+    INDEX idx_Transmission CLUSTERED (TransmissionID ASC) PARTITIONED BY HASH (TransmissionID)
+);

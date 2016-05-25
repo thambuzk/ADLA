@@ -1,0 +1,15 @@
+﻿USE DATABASE [CustomExtractor];
+REFERENCE ASSEMBLY [CustomExtractorDLALibrary];
+
+DECLARE @sellirawinputfile string = "/import/sellin/input/20151220s.SAP.235959.txt.TXT";
+DECLARE @sellirawmd5outputfile string = @sellirawinputfile + ".md5";
+
+//Fake call to check the 
+@salesrawrecords =
+    EXTRACT MD5String string
+    FROM @sellirawinputfile
+    USING new MicrosoftIT.CustomExtractorDLALibrary.Model.MD5Extractor(@sellirawinputfile,"EFB4D9AB6CFD99F69F3DFEDFFACE8527");
+
+OUTPUT @salesrawrecords
+TO @sellirawmd5outputfile
+USING Outputters.Csv();

@@ -1,0 +1,2 @@
+﻿USE DATABASE [CustomExtractor];
+CREATE SCHEMA IF NOT EXISTS [Ingestion];

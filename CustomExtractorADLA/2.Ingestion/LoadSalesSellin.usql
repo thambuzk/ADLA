@@ -1,0 +1,49 @@
+﻿USE DATABASE [CustomExtractor];
+DROP PROCEDURE IF EXISTS Ingestion.LoadSalesSellIn;
+CREATE PROCEDURE Ingestion.LoadSalesSellIn
+(
+    @speed int
+)
+AS 
+BEGIN
+REFERENCE ASSEMBLY [CustomExtractorADLALibrary];
+
+DECLARE @sellirawinputfile string = "/import/sellin/input/20151220s.SAP.235959.txt.TXT";
+DECLARE @sellirawmd5outputfile string = @sellirawinputfile + ".md5";
+DECLARE @sellirawoutputfile string = @sellirawinputfile + ".output";
+
+
+@salesrawrecords =
+    EXTRACT InvoiceDate string          
+           ,CompanyCode string
+           ,SalesOfficeCode string
+           ,TerritoryCode string
+           ,PartNumber string
+           ,ShipTo string
+           ,BillTo string
+           ,BillDocTypeCode string
+           ,GKProgramCode string
+           ,GKItemID string
+           ,CurrencyCode string
+           ,Qty string
+           ,Revenue string
+           ,TransferCOGS string
+           ,PlantCode string
+           ,InvoiceDocNumber string
+           ,InvoiceLineItemNumber string
+           ,ReasonCode string
+           ,BillingSystemCode string
+           ,RecordTypeCode string
+           ,ChannelCode string
+           ,SubsidiaryCode string
+           ,OriginalTransactionDate string
+    FROM @sellirawinputfile
+    //USING new CustomExtractorDLA.FixedPositionExtractor("EFB4D9AB6CFD99F69F3DFEDFFACE8527");
+    USING new MicrosoftIT.CustomExtractorADLALibrary.Model.FixedPositionExtractor("S.SAP");
+
+OUTPUT @salesrawrecords
+TO @sellirawoutputfile
+USING Outputters.Csv();
+
+END;
+

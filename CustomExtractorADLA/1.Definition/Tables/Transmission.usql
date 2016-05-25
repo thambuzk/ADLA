@@ -1,0 +1,29 @@
+﻿USE DATABASE [CustomExtractor];
+
+DROP TABLE IF EXISTS [Ingestion].[Transmission];
+CREATE TABLE  IF NOT EXISTS [Ingestion].[Transmission](
+	[TransmissionID] int?,
+//	[SourceOrgID] int,
+//	[TransmissionTypeID] int,
+//	[TransmissionOriginalityID] int,
+//	[ReportedOriginalityMsgID] int,
+//	[ReportedOriginality] string,
+//	[TransmissionStatusID] int,
+//	[FiscalWeekID] int,
+//	[SourceFileID] int,
+	[FileName] string,
+//	[FilePath] string,
+//	[FileDate] DateTime,
+//	[ReportEndDate] DateTime,
+//	[ReportedReportEndDate] string,
+//	[ReportedReportEndDateMsgID] int,
+//	[TransmissionDate] DateTime,
+//	[ApprovalRequiredFlag] string,
+//	[ApproveDate] DateTime,
+//	[ApproveBy] string,
+//	[UpdateDate] DateTime,
+//	[UpdateBy] string,
+//	[TransmissionMethodID] int,
+//	[ArchiveFileName] string,
+    INDEX idx_Transmission CLUSTERED (TransmissionID ASC) PARTITIONED BY HASH (TransmissionID)
+ );

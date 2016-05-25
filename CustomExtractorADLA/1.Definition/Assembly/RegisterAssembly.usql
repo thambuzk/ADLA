@@ -1,0 +1,16 @@
+﻿// Define assembly path
+DECLARE @ADL_BASEURI string = "swebhdfs://CustomExtractor.azuredatalakestore.net/"; 
+DECLARE @ADL_INPUTDIR string = @ADL_BASEURI + "Assembly/";
+DECLARE @ADL_Assembly string = @ADL_INPUTDIR + "CustomExtractorDLALibrary.dll";
+
+//Define the additional file path
+DECLARE @ADL_ADDFILEFORMATPATH string = "swebhdfs://CustomExtractor.azuredatalakestore.net/Assembly/Data/Format.json";
+DECLARE @ADL_ADDFILETABLESPATH string = "swebhdfs://CustomExtractor.azuredatalakestore.net/Assembly/Data/Tables.json";
+
+// Create the database
+USE CustomExtractor;
+
+// Register the assembly
+CREATE ASSEMBLY CustomExtractorDLALibrary
+FROM @ADL_Assembly
+WITH ADDITIONAL_FILES = (@ADL_ADDFILEFORMATPATH,@ADL_ADDFILETABLESPATH);

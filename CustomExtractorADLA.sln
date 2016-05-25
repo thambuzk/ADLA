@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{182E2583-ECAD-465B-BB50-91101D7C24CE}") = "CustomExtractorADLA", "CustomExtractorADLA\CustomExtractorADLA.usqlproj", "{B301DE68-693F-467C-9299-13F87582F987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomExtractorADLALibrary", "CustomExtractorADLALibrary\CustomExtractorADLALibrary.csproj", "{1B3E7106-6D16-4B96-87C5-F15E18FFC08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B301DE68-693F-467C-9299-13F87582F987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B301DE68-693F-467C-9299-13F87582F987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B301DE68-693F-467C-9299-13F87582F987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B301DE68-693F-467C-9299-13F87582F987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3E7106-6D16-4B96-87C5-F15E18FFC08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3E7106-6D16-4B96-87C5-F15E18FFC08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3E7106-6D16-4B96-87C5-F15E18FFC08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3E7106-6D16-4B96-87C5-F15E18FFC08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

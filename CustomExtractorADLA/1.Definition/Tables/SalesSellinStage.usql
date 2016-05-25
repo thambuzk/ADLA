@@ -1,0 +1,24 @@
+﻿USE DATABASE [CustomExtractor];
+
+DROP TABLE IF EXISTS [Ingestion].[SalesSellinStage];
+CREATE TABLE IF NOT EXISTS [Ingestion].[SalesSellinStage]
+(
+    InvoiceDate string,
+    CompanyCode string,
+    SalesOfficeCode string,
+    TerritoryCode string,
+    PartNumber string,
+    ShipTo string,
+    BillTo string,
+    BillDocTypeCode string,
+    GKProgramCode string,
+    GKItemID string,
+    CurrencyCode string,
+    Qty string,
+    Revenue string,
+    TransferCOGS string,
+    PlantCode string,
+    InvoiceDocNumber string,
+    InvoiceLineItemNumber string,
+    ReasonCode string
+);

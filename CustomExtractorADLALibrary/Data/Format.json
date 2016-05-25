@@ -1,0 +1,228 @@
+﻿[
+  {
+    "FileIdentifier": "S.SAP",
+    "TableName": "SellInSalesRaw",
+    "FileType": "FixedPosition",
+    "FileDelimiterASCIIValue": -1,
+    "FileColumns": [
+      {
+        "Field": "InvoiceDate",
+        "IsRequired": 0,
+        "Position": 2,
+        "Length": 6
+      },
+      {
+        "Field": "CompanyCode",
+        "IsRequired": 0,
+        "Position": 8,
+        "Length": 4
+      },
+      {
+        "Field": "SalesOfficeCode",
+        "IsRequired": 0,
+        "Position": 12,
+        "Length": 4
+      },
+      {
+        "Field": "TerritoryCode",
+        "IsRequired": 0,
+        "Position": 16,
+        "Length": 8
+      },
+      {
+        "Field": "PartNumber",
+        "IsRequired": 0,
+        "Position": 24,
+        "Length": 16
+      },
+      {
+        "Field": "ShipTo",
+        "IsRequired": 0,
+        "Position": 40,
+        "Length": 20
+      },
+      {
+        "Field": "BillTo",
+        "IsRequired": 1,
+        "Position": 40,
+        "Length": 20
+      },
+      {
+        "Field": "BillDocTypeCode",
+        "IsRequired": 0,
+        "Position": 80,
+        "Length": 4
+      },
+      {
+        "Field": "GKProgramCode",
+        "IsRequired": 0,
+        "Position": 84,
+        "Length": 3
+      },
+      {
+        "Field": "GKItemID",
+        "IsRequired": 0,
+        "Position": 87,
+        "Length": 16
+      },
+      {
+        "Field": "CurrencyCode",
+        "IsRequired": 0,
+        "Position": 103,
+        "Length": 3
+      },
+      {
+        "Field": "Qty",
+        "IsRequired": 0,
+        "Position": 106,
+        "Length": 22
+      },
+      {
+        "Field": "Revenue",
+        "IsRequired": 0,
+        "Position": 128,
+        "Length": 26
+      },
+      {
+        "Field": "TransferCOGS",
+        "IsRequired": 0,
+        "Position": 154,
+        "Length": 26
+      },
+      {
+        "Field": "PlantCode",
+        "IsRequired": 0,
+        "Position": 180,
+        "Length": 4
+      },
+      {
+        "Field": "InvoiceDocNumber",
+        "IsRequired": 0,
+        "Position": 184,
+        "Length": 10
+      },
+      {
+        "Field": "InvoiceLineItemNumber",
+        "IsRequired": 0,
+        "Position": 194,
+        "Length": 6
+      },
+      {
+        "Field": "ReasonCode",
+        "IsRequired": 0,
+        "Position": 210,
+        "Length": 3
+      }
+    ]
+  },
+  {
+    "FileIdentifier": "S.CIS",
+    "TableName": "SellInSalesRaw",
+    "FileType": "Delimited",
+    "FileDelimiterASCIIValue": 9,
+    "FileColumns": [
+      {
+        "Field": "InvoiceDate",
+        "IsRequired": 0,
+        "Position": 1,
+        "Length": 6
+      },
+      {
+        "Field": "CompanyCode",
+        "IsRequired": 0,
+        "Position": 2,
+        "Length": 4
+      },
+      {
+        "Field": "SalesOfficeCode",
+        "IsRequired": 0,
+        "Position": 3,
+        "Length": 4
+      },
+      {
+        "Field": "TerritoryCode",
+        "IsRequired": 0,
+        "Position": 4,
+        "Length": 8
+      },
+      {
+        "Field": "PartNumber",
+        "IsRequired": 0,
+        "Position": 5,
+        "Length": 16
+      },
+      {
+        "Field": "ShipTo",
+        "IsRequired": 0,
+        "Position": 6,
+        "Length": 20
+      },
+      {
+        "Field": "BillTo",
+        "IsRequired": 0,
+        "Position": 6,
+        "Length": 20
+      },
+      {
+        "Field": "BillDocTypeCode",
+        "IsRequired": 0,
+        "Position": 8,
+        "Length": 4
+      },
+      {
+        "Field": "GKProgramCode",
+        "IsRequired": 0,
+        "Position": 9,
+        "Length": 3
+      },
+      {
+        "Field": "GKItemID",
+        "IsRequired": 0,
+        "Position": 10,
+        "Length": 16
+      },
+      {
+        "Field": "CurrencyCode",
+        "IsRequired": 0,
+        "Position": 11,
+        "Length": 3
+      },
+      {
+        "Field": "Qty",
+        "IsRequired": 0,
+        "Position": 12,
+        "Length": 22
+      },
+      {
+        "Field": "Revenue",
+        "IsRequired": 0,
+        "Position": 13,
+        "Length": 26
+      },
+      {
+        "Field": "TransferCOGS",
+        "IsRequired": 0,
+        "Position": 14,
+        "Length": 26
+      },
+      {
+        "Field": "PlantCode",
+        "IsRequired": 0,
+        "Position": 15,
+        "Length": 4
+      },
+      {
+        "Field": "InvoiceDocNumber",
+        "IsRequired": 0,
+        "Position": 16,
+        "Length": 10
+      },
+      {
+        "Field": "ReasonCode",
+        "IsRequired": 0,
+        "Position": 17,
+        "Length": 3
+      }
+    ]
+  }
+]
